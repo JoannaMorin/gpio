@@ -1,6 +1,11 @@
 import RPi.GPIO as GPIO
 from time import sleep
+"""
+Small GPIO programm to flash a LED on a breadboard; the user has to choose HOW MANY BLINKS and for HOW LONG (secondes).
 
+Petit programme GPIO faisant clignoter un DEL sur une platine d'experimentation (breadboard). L'utilisateur doit choisir
+LE NOMBRE DE CLIGNOTIS et LA DUREE (secondes).
+"""
 def main():
     #GPIO Settings
     GPIO.setmode(GPIO.BOARD)
