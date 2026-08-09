@@ -14,8 +14,8 @@ def main():
     #Main programm
     looping = True
     while looping == True:
-        nbr_blinks = asking_int_input("How many blinks")
-        sleep_between_blinks = asking_float_input("How long the sleep between the blinks")
+        nbr_blinks = get_int("How many blinks")
+        sleep_between_blinks = get_float("How long the sleep between the blinks")
 
         for i in range(1, nbr_blinks):
             GPIO.output(11, 1)
@@ -28,11 +28,19 @@ def main():
     #Cleaning up GPIO
     GPIO.cleanup()
 
-def asking_int_input(question):
-    return int(input(f"{question} :"))
+def get_int(question):
+    While True:
+        try:
+            return int(input(question))
+        except ValueError:
+            print("Please enter an integer")
 
-def asking_float_input(question):
-    return float(input(f"{question} :"))
+def get_flaot(question):
+    while True:
+        try:
+            return float(question))
+        except ValuError:
+            print("Please enter an number")
 
 main()
 
