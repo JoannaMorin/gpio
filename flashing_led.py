@@ -40,7 +40,7 @@ def get_flaot(question):
         try:
             return float(question))
         except ValuError:
-            print("Please enter an number")
+            print("Please enter a number")
 
 main()
 
